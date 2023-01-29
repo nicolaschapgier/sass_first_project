@@ -1,0 +1,35 @@
+$radius: 50%;
+$color1: #fb9d5a;
+$color2: #fece0f;
+$color3: #373736;
+
+@mixin myRing($x, $y, $a, $b) {
+  height: $x;
+  width: $x;
+  border-radius: $y;
+  border: $a solid $b;
+}
+
+span {
+  @include myRing(40px, 50%, 4px, $color1);
+  padding: 1px;
+}
+
+.box {
+  display: flex;
+}
+// span {
+//   width: 50px;
+//   height: 50px;
+//   padding: 50%;
+//   border-radius: 50%;
+//   border: 4px solid $color1;
+// }
+// @mixin myShadows($x, $y, $blur, $color) {
+//   text-shadow: $x $y $blur $color;
+//   box-shadow: $x/2 $y/2 $blur/2 lighten($color, 50);
+// }
+
+// .myText {
+//   @include myShadows(6px 6x 4px #ff0000);
+// }
